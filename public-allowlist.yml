@@ -1,0 +1,45 @@
+# ABIS Public v0.1 — File Allowlist
+# Default rule: UNKNOWN = NOT PUBLIC
+
+version: "0.1.2-product"
+updated: "2026-11-24"
+repository: abis-standard/abis
+release: public-v0.1
+notes_doc_baseline: "0.1.2-product — add canonical Product workspace (product/**); framework identity remains Public v0.1"
+
+default_rule: UNKNOWN_NOT_PUBLIC
+
+allowed_paths:
+  - README.md
+  - CONCEPT.md
+  - SCOPE.md
+  - ARCHITECTURE.md
+  - TERMINOLOGY.md
+  - GOVERNANCE.md
+  - ROADMAP.md
+  - docs/**
+  - assets/**
+  - .github/CONTRIBUTING.md
+  - .github/copilot-instructions.md
+  - .github/workflows/disclosure-gate.yml
+  - .github/workflows/release-disclosure-gate.yml
+  - public-allowlist.yml
+  - NOTICE
+  - scripts/disclosure/**
+  - releases/TC02/**
+  - validation/TC02/**
+  - validation/README.md
+  - validation/evidence/**
+  - normative-candidates/ABIS-NORMATIVE-v0.2-TC02/**
+  - product/**
+
+# Local-only files (must NOT be committed to the public repository)
+local_only_paths:
+  - BUILD_REPORT.md
+  - PUBLIC_RELEASE_MANIFEST.txt
+  - LOCAL_DISCLOSURE_POLICY.yml
+
+notes:
+  - No open-source software license is granted by Public v0.1; see NOTICE.
+  - Local release-engineering records must not be committed.
+  - Detailed disclosure policy for maintainers is stored locally only.

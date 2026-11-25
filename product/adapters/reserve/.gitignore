@@ -1,0 +1,12 @@
+# Build / distribution outputs — do not commit (HD-RESERVE-COMPLETION-01)
+build/
+dist/
+*.egg-info/
+.eggs/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv-test/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

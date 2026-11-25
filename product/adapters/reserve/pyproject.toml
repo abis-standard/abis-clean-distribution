@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abis-reserve"
+version = "0.1.0rc4"
+description = "ABIS Reserve Adapter (Release Candidate — not production-established)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "LicenseRef-ABIS-Proprietary"
+authors = [{ name = "ABIS / Coa Retail" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["abis_reserve*"]
+
+[tool.setuptools.package-data]
+abis_reserve = ["registry.json"]

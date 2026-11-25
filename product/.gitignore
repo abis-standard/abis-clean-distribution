@@ -1,0 +1,8 @@
+# Derived / regenerable (see build/output/README.md)
+build/output/*
+!build/output/README.md
+
+# Local Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/

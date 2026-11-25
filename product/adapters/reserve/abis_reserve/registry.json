@@ -1,0 +1,70 @@
+{
+  "registry_version": "0.0.0-r4-candidate",
+  "mutation_default": "DENY",
+  "drivers": [
+    {
+      "driver_id": "R05_MOTOPRESS_LITE",
+      "provider_match": {
+        "plugin_slug": "motopress-appointment",
+        "edition": "Lite"
+      },
+      "provider_type": "NATIVE_RESERVATION",
+      "supported_editions": ["Lite"],
+      "supported_versions": {
+        "match_policy": "SUPPORTED_RANGE",
+        "observed": "2.4.9",
+        "r1_alternate_reported": "1.24.6"
+      },
+      "interaction_modes": ["REST", "AdminUI", "Observation"],
+      "capabilities": [
+        "discover",
+        "observeAvailability",
+        "validateIntent",
+        "prepareExecution",
+        "createBooking",
+        "observeProviderAck",
+        "observePersistence",
+        "observeProviderStatus",
+        "collectEvidence"
+      ],
+      "required_interfaces": ["wp-json/motopress/appointment/v1"],
+      "authorization_requirements": ["human_authorization", "provider_authorization_nonce"],
+      "known_limitations": [
+        "published_availability_not_guaranteed_at_create",
+        "admin_has_no_native_booking_api",
+        "SLOT_CONFLICT_NOT_IDEMPOTENT"
+      ]
+    },
+    {
+      "driver_id": "F02_FLUENT_FORMS_FREE",
+      "provider_match": {
+        "plugin_slug": "fluentform",
+        "edition": "Free"
+      },
+      "provider_type": "GENERIC_FORM",
+      "supported_editions": ["Free"],
+      "supported_versions": {
+        "match_policy": "EXACT",
+        "observed": "6.2.17"
+      },
+      "interaction_modes": ["FrontForm", "AdminAjax", "Observation"],
+      "capabilities": [
+        "discover",
+        "classifyFormSemantics",
+        "validateFields",
+        "prepareExecution",
+        "submitForm",
+        "observeSubmissionAck",
+        "observeEntryPersistence",
+        "collectEvidence"
+      ],
+      "required_interfaces": ["admin-ajax.php?action=fluentform_submit"],
+      "authorization_requirements": ["human_authorization"],
+      "known_limitations": [
+        "no_native_reservation_lifecycle",
+        "business_confirmation_not_established",
+        "max_outcome_ceiling_L2"
+      ]
+    }
+  ]
+}

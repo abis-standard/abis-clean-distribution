@@ -1,0 +1,24 @@
+Copyright © 2026 CoaRetail G.K.
+All rights reserved.
+
+ABIS and Agent Business Interaction Standard are names used
+for this project by CoaRetail G.K.
+
+Public availability of this repository does not, by itself,
+grant rights to private implementations, internal specifications,
+certification marks, or non-public ABIS materials.
+
+## Components in this publication candidate (Option B)
+
+| Component | Path | License / copyright |
+| --- | --- | --- |
+| ABIS specifications and documentation | Repository root `*.md`, `docs/` | Copyright © 2026 CoaRetail G.K. (`SPEC_DOCS_COPYRIGHT_PROVENANCE: HUMAN_ATTESTED`) |
+| Foundation WordPress plugin | `product/foundation/wordpress-plugin/` | GPL-2.0-or-later — `LICENSE`, `LICENSE-SCOPE.md` |
+| Reserve Adapter source | `product/adapters/reserve/` | `LicenseRef-ABIS-Proprietary` — `LICENSE`, `LICENSE-SCOPE.md`, `pyproject.toml` |
+| GPLv2 reference copy (build) | `product/build/foundation/gpl-2.0-full.txt` | GPLv2 text (FSF); applies only as referenced for Foundation/build context |
+
+Third-party GPL reference copy path: `product/build/foundation/gpl-2.0-full.txt`
+
+Spec/docs copyright attestation: Human Authority HD-ABIS-PUBLICATION-RIGHTS-BIND-01 (CoaRetail G.K. ownership for current publication scope).
+
+Brand logo `assets/abis-logo.png` is excluded from this publication candidate per Human rights bind (not a permanent denial).

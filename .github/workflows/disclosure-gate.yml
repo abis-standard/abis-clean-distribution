@@ -1,0 +1,19 @@
+name: Disclosure Gate
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  disclosure-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run M-229D public disclosure gate
+        shell: bash
+        run: ./scripts/disclosure/run-disclosure-gate.sh
